@@ -1,0 +1,248 @@
+python保留字
+>>>import keyword
+>>> keyword.kwlist
+"""
+['False', 'None', 'True', 'and', 'as', 'assert', 'break', 'class', 'continue',
+    'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is',
+    'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+"""
+'''
+多行
+注释
+'''
+
+a=b+\
+  c
+a=[b+c]
+多行语句
+
+for x in test1：		#遍历逐个查看
+    print（x）
+if "a" in test1:	#查询是否在里面
+    print("'a'在test1里面")
+print(len(test1))	#获取test1的长度
+
+
+a=Hello
+print(a.lower())	#把字符串转换成小写
+a=hello
+print(a.upper())	#把字符串转换成大写
+a=HELLO
+'''
+list			#列表[]
+thislist.append("orange")	#插入末尾
+thislist.insert(1,"orange")	#插入指定位置
+thislist.remove("banana")	#删除其中的值
+thislist.pop()			#删除末尾的值
+del this.list[1]		#删除指定位置的值
+thislist.clear()		#清空列表
+tuple			#元组()
+x = ("apple", "banana")
+y = list(x)
+y[1] = "kiwi"
+x = tuple(y)			#元组不可修改，可转换成其他类型进行修改
+del thistuple			#删除元组，无法打印，元组已不存在
+set			#集合{}	
+x = ("apple", "banana")
+y = list(x)
+y[1] = "kiwi"
+x = tuple(y)			#集合排列无序，可转换成其他类型进行修改
+thisset.remove("banana")	#删除其中的值
+thisset.discard("banana")	#删除其中的值
+thisset.pop()			#随机删除末尾的值
+thisset.clear()			#清空集合
+del thisset			#删除集合，无法打印，集合已不存在
+dict			#字典{"":""}
+thisdict =	{"brand": "Porsche","model": "911","year": 1963}
+x = thisdict["model"]		#访问指定的值
+thisdict["year"] = 2019		#修改指定的值
+for x in thisdict:
+    print(x)			#逐一打印键名
+    print(thisdict[x])		#逐一打印值
+for x in thisdict.values():
+    print(x)			#显示所有的值
+for x, y in thisdict.items():
+    print(x, y)			#显示所有的键值对
+thisdict["color"]="red"		#添加到末尾的键值对
+thisdict.pop("model")		#删除指定键值对
+thisdict.clear()		#清空字典
+'''
+if		#简写 if a>b: print("a")
+elif
+else		#简写 print(a) if a>b else print(b)
+and		#一不通即不通
+or		#一通即通
+in		#和if一起判断是否在其中
+
+while		#循环语句
+i = 1
+while i < 7:
+    print(i)
+    if i == 3:
+    break			    #打断，暂停
+
+    i += 1
+    if i == 2:
+    continue			#继续，跳过这次循环
+    print(i)
+
+for		#循环语句
+for x in "banana":		#遍历字符串
+    print(x)
+fruits = ["apple", "banana", "cherry"]
+for x in fruits:
+    print(x)
+    if x == "banana":
+        break			#打断，暂停
+
+    if x == "banana":
+        continue
+    print(x)			#继续，跳过这次循环
+
+for x in range(10):		#range()函数
+    print(x)
+else:				    #循环后执行
+    print("Finally finished!")
+
+for x in A:			    #嵌套for循环
+    for y in B:
+        print(x,y)
+
+def		#自定义函数
+def my_function(x):
+  return 5 * x			#return 返回值
+print(my_function(3))
+
+def tri_recursion(k):		#递归的自定义函数
+  if(k>0):
+    result = k+tri_recursion(k-1)
+    print(result)
+  else:
+    result = 0
+  return result
+print("\n\nRecursion Example Results")
+tri_recursion(6)
+
+lambda		#lambda函数
+x = lambda a, b : a * b
+print(x(2, 5))
+
+x = lambda a, b, c : a + b + c
+print(x(6, 7, 2))
+
+cars		#数组
+cars.append("a")		    #添加元素
+cars.pop(1)			        #删除元素
+
+class		    #类
+class MyClass:
+    x = 7
+p1 = MyClass()
+print(p1.x)			                                #7
+print(MyClass)			                            #<class '__main__.MyClass'>
+
+class MyClass:
+    x = 7
+p1 = MyClass()				                        #创建对象
+
+class Person:
+    def __init__(self, name, age):	                #_init_()函数
+        self.name = name
+        self.age = age
+    def myfunc(self):
+        print("Hello my name is " + self.name)
+    def myfunc(abc):			                    #self参数
+        print("Hello my name is " + abc.name)
+
+p1 = Person("Bill", 63)
+p1.age = 64				#修改对象属性
+p1.myfunc()				#创建对象方法
+del p1.age				#删除对象属性
+del p1					#删除对象
+
+mytuple = ("apple", "banana")             #从元组返回迭代器
+myit = iter(mytuple)
+print(next(myit))                          #apple
+print(next(myit))                          #banana
+mystr = "ba"                              #从字符串返回迭代器
+myit = iter(mystr)
+print(next(myit))                          #b
+print(next(myit))                          #a
+
+class MyNumbers:                           #创建迭代器
+    def __iter__(self):
+        self.a = 1
+        return self
+    def __next__(self):
+        x = self.a
+        self.a += 1
+        return x
+myclass = MyNumbers()
+myiter = iter(myclass)
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+class MyNumbers:                           #停止迭代器
+    def __iter__(self):
+        self.a = 1
+        return self
+    def __next__(self):
+        if self.a <= 20:
+            x = self.a
+            self.a += 1
+            return x
+        else:
+            raise StopIteration
+myclass = MyNumbers()
+myiter = iter(myclass)
+for x in myiter:
+    print(x)
+
+
+
+python字符串格式化
+
+price = 52
+txt = "The price is {} dollars"
+print(txt.format(price))
+
+The price is 52 dollars
+
+txt = "The price is {:.2f} dollars"
+print(txt.format(price))
+
+The price is 52.00 dollars
+
+
+quantity = 3
+itemno = 567
+price = 52
+myorder = "I want {} pieces of item number {} for {:.2f} dollars."
+print(myorder.format(quantity, itemno, price))
+I want 3 pieces of item number 567 for 52.00 dollars.
+
+此外，如果要多次引用相同的值，请使用索引号：
+age = 63
+name = "Bill"
+txt = "His name is {1}. {1} is {0} years old."
+print(txt.format(age, name))
+
+His name is Bill. Bill is 63 years old.
+
+您还可以通过在花括号 {carname} 中输入名称来使用命名索引，但是在传递参数值 txt.format(carname = "Ford") 时，必须使用名称：
+
+myorder = "I have a {carname}, it is a {model}."
+print(myorder.format(carname = "Porsche", model = "911"))
+
+I have a Porsche, it is a 911.
+
+
+try 块允许您测试代码块以查找错误。
+
+except 块允许您处理错误。
+
+finally 块允许您执行代码，无论 try 和 except 块的结果如何。
+
+
+
+
