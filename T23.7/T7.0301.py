@@ -32,3 +32,4 @@ l2.place(x=40, y=50,   # 设置x，y坐标
 
 window.mainloop()
 
+

@@ -1,11 +1,11 @@
-"""
-实例056：画圈
-题目 画图，学用circle画圆形。
-"""
+print("""
+实例056:画圈
+题目 画图,学用circle画圆形。
+""")
 
 from tkinter import *
 
-canvas = Canvas(width=800, height=600, bg='yellow')
+canvas = Canvas(width=500, height=500, bg='yellow')     # 页面大小 500*500  背景颜色 黄色
 canvas.pack(expand=YES, fill=BOTH)
 k = 1
 j = 1
@@ -15,16 +15,15 @@ for i in range(26):
     j += 0.3
 mainloop()
 
-"""
-实例057：画线
-题目 画图，学用line画直线。
-
-"""
+print("""
+实例057:画线
+题目 画图,学用line画直线。
+""")
 
 if __name__ == '__main__':
     from tkinter import *
 
-    canvas = Canvas(width=600, height=600, bg='green')
+    canvas = Canvas(width=500, height=500, bg='green')      # 页面大小 300*300  背景颜色 绿色
     canvas.pack(expand=YES, fill=BOTH)
     x0 = 263
     y0 = 263
@@ -48,17 +47,17 @@ if __name__ == '__main__':
 
     mainloop()
 
-"""
-实例058：画矩形
-题目 画图，学用rectangle画方形。
-"""
+print("""
+实例058:画矩形
+题目 画图,学用rectangle画方形。
+""")
 
 if __name__ == '__main__':
     from tkinter import *
 
     root = Tk()
     root.title('Canvas')
-    canvas = Canvas(root, width=600, height=600, bg='yellow')
+    canvas = Canvas(root, width=500, height=500, bg='yellow')
     x0 = 263
     y0 = 263
     y1 = 275
@@ -73,16 +72,15 @@ if __name__ == '__main__':
     canvas.pack()
     root.mainloop()
 
-"""
-实例059：画图（丑）
-题目 画图，综合例子。
-
-"""
+print("""
+实例059:画图(丑)
+题目 画图，综合例子
+""")
 
 if __name__ == '__main__':
     from tkinter import *
 
-    canvas = Canvas(width=600, height=600, bg='green')
+    canvas = Canvas(width=300, height=300, bg='green')
     canvas.pack(expand=YES, fill=BOTH)
     x0 = 150
     y0 = 100
@@ -113,12 +111,7 @@ if __name__ == '__main__':
     mainloop()
 
 
-
-
-
-
-
-
+print("网络图形")
 import math
 from tkinter import *
 
